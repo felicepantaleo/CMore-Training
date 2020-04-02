@@ -1,5 +1,5 @@
 # CMore-Training
 runnare questi comandi nel terminale:
 
-cd Mask_RCNN /n
-python setup.py
+* cd Mask_RCNN
+* python setup.py
