@@ -10,6 +10,10 @@ dest=orig+"/coco"
 with zipfile.ZipFile("coco.zip", 'r') as zip_ref:
     zip_ref.extractall(dest)
 
+current=orig+"/Mask_RCNN-master/mask_rcnn_coco.h5"
+url = 'https://drive.google.com/uc?export=download&id=1DgosDoxddKr0mq9sRxjALez8v9HEmVm1'
+urllib.request.urlretrieve(url, current)
+
 os.system("python convert_labelme_to_coco.py coco/coco")
 os.rename(orig+"/trainval.json",orig+"/train.json")
 os.system("python convert_labelme_to_coco.py coco/coco_val")
